@@ -1,0 +1,432 @@
+      
+      
+      
+      <!DOCTYPE html>
+                  <html lang="ru">
+                                            <head>
+                                          <meta charset="UTF-8">
+                                               <title>ТЕПЕРЬ ЭТО ТВОЙ ДОМ</title>
+                                                          <style>
+                                                                  body {
+             
+             
+             
+             
+             
+             
+             
+             
+             
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                    background: repeating-linear-gradient(45deg, red, yellow, lime, cyan, blue, magenta, red 10px);
+                                             font-family: 'Papyrus', fantasy;
+                                                        display: flex;
+                                                       justify-content: center;
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                                                       align-items: center;
+                                                                          min-height: 100vh;
+                                                               margin: 0;
+                                                                                          overflow: hidden;
+                                                                                          animation: bgFlash 0.1s infinite alternate;
+    }
+    
+                                                                           @keyframes bgFlash {
+                                                          from { filter: hue-rotate(0deg); }
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                                                          to { filter: hue-rotate(360deg); }
+    }
+    
+                                                  ._________________________ {
+                                        background-color: #ff00ff;
+                                                                              border: 10px dashed #00ff00;
+                                                              border-radius: 50px;
+                                                       padding: 30px;
+                           width: 400px;
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+                           text-align: center;
+                                                                  box-shadow: 10px 10px 30px red;
+                                  opacity: 0;
+                                                  transform: rotate(-10deg) scale(0.8);
+                       transition: all 1s ease-in-out;
+    }
+                             ._________________________:hover {
+                                                      transform: rotate(10deg) scale(1.2);
+    }
+    
+                            ._________________________ img {
+                                border-radius: 50%;
+                        width: 200px;
+                                                                         height: 200px;
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                                                                         border: 10px double #ffcc00;
+    }
+    h1 {
+                                                 color: #00ffff;
+                                                       text-shadow: 3px 3px 5px black;
+                                                animation: textWobble 1s infinite alternate;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                     @keyframes textWobble {
+                                     from { transform: rotate(-5deg); }
+                                              to { transform: rotate(5deg); }
+    }
+    
+    .__________________________ {
+                                                                  background: linear-gradient(45deg, purple, orange);
+                                                                margin: 10px 0;
+                                                padding: 2px;
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                                                border-radius: 15px;
+                                                border: 5px solid lime;
+                                                                      color: yellow;
+                                          font-weight: bold;
+                                                                       animation: fieldFlash 0.2s infinite alternate;
+    }
+    
+    @keyframes fieldFlash {
+                  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      from { transform: scale(1); }
+                    to { transform: scale(1.1); }
+    }
+    
+    /* Эпичный переход */
+                                  #epic-overlay {
+                                                                    position: fixed;
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+                                                                    top: 0; left: 0;
+                                                 width: 100%; height: 100%;
+                                             background: black;
+                     z-index: 9999;
+                                                                                              display: flex;
+                                          flex-direction: column;
+                                            justify-content: center;
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+                                            color: white;
+                                                                                                           font-size: 3em;
+                                              text-align: center;
+                           opacity: 1;
+    }
+    
+                                                      #_______________________________ {
+      font-size: 1.5em;
+             
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      padding: 15px 30px;
+                           background: yellow;
+      border: 5px solid red;
+                                                                            border-radius: 20px;
+                                                                 cursor: pointer;
+                                                          margin-top: 20px;
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+                                                          transition: 0.2s;
+                                             }
+    
+                                                     #_______________________________:hover {
+                                                     background: red;
+                                                       color: yellow;
+                                                                                            transform: scale(1.2);
+                           }
+                                     </style>
+                    </head>
+                                                        <body>
+  <!-- Эпичный переход -->
+                                                     <div id="epic-overlay">
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+                                                      <div id="epic-text">Готовься к эпическому моменту!</div>
+                                         <button id="_______________________________">ЛегоЛегоЛего!</button>
+                                               </div>
+
+  <!-- Аудио для эпичного вступления -->
+                                                 <audio id="audio" src="epic.mp3" type="audio/mpeg"></audio>
+
+  <!-- Профиль -->
+                                                <div class="_________________________" id="_________________________" style="height: 600px">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                                                  <img src="Олег1.jpg" alt="Фото профиля">
+                                                                         <h3>Ваш профиль</h3>
+                                               <h1>Олег</h1>
+                                     <p><strong>Возраст:</strong> 30 лет</p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+                                     <div class="__________________________">
+                                            <p><strong>Любимый напиток:</strong> Говно в чае</p>
+                                                                </div>
+                                     <div class="__________________________">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                                      <p><strong>Способность:</strong> Чистить зубы говном</p>
+                                                </div>
+                                                                     <div class="__________________________">
+                                                  <p><strong>ОлегОлегОлег</strong> ОлегОлегОлег</p>
+                                     </div>
+                                         <h3>Ну вот, теперь это твое бремя</h3>
+  </div>
+
+                    <script>
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+                      document.getElementById('_______________________________').addEventListener('click', function() {
+                                                         const audio = document.getElementById('audio');
+      audio.volume = 1.0;
+                                                              audio.play().catch(error => console.log('Ошибка воспроизведения:', error));
+
+
+
+
+
+
+
+
+
+
+
+                                                                     document.getElementById('epic-overlay').style.opacity = '0';
+             
+             
+             
+             
+             
+             
+             
+             
+                                                                     setTimeout(() => {
+                        document.getElementById('epic-overlay').style.display = 'none';
+                                                                                          document.getElementById('_________________________').style.opacity = '1';
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                                                                                          document.getElementById('_________________________').style.transform = 'rotate(0deg) scale(1)';
+                                                  }, 2000);
+                                    });
+                                                                                       </script>
+                                                </body>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                                                </html>

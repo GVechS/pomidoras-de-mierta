@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+         
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>Личные предпочтения: Абсурдная версия</title>
+                  <style>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+                    /* Фон с абсурдными узорами и меняющимися цветами */
+                              body {
+                                    font-family: 'Comic Sans MS', cursive, sans-serif;
+                                        background: repeating-linear-gradient(
+          
+          
+          
+          
+          
+          
+          
+          
+                                        45deg,
+                                        #ff69b4,
+                                       #ff69b4 10px,
+         
+         
+
+
+
+
+
+
+
+
+
+
+
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+                                       #00ffff 10px,
+                                       #00ffff 20px
+                                                     );
+                                       animation: bgChange 5s linear infinite;
+                                                  padding: 20px;
+           
+           
+           
+           
+           
+           
+           
+           
+           
+                                                  margin: 0;
+                                     overflow-x: hidden;
+                                }
+                                         @keyframes bgChange {
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+                                          0% { filter: hue-rotate(0deg); }
+                                     100% { filter: hue-rotate(360deg); }
+                               }
+    
+                               /* Форма с огромными кнопками, прыгающими заголовками и странными тенями */
+                            form {
+                                      background: #fff;
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+                                      padding: 40px;
+                                                border: 10px dotted hotpink;
+                                   border-radius: 50px;
+                               max-width: 600px;
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                               margin: 40px auto;
+                              box-shadow: 0 0 30px 10px lime;
+                                                            position: relative;
+                                                transform: rotate(-2deg) skew(3deg);
+                                                    animation: wobble 3s infinite;
+                                         }
+                              @keyframes wobble {
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                                0%   { transform: rotate(-2deg) skew(3deg); }
+                                                         25%  { transform: rotate(4deg) skew(-2deg); }
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                                                         50%  { transform: rotate(-4deg) skew(4deg); }
+                                     75%  { transform: rotate(2deg) skew(-3deg); }
+                                    100% { transform: rotate(-2deg) skew(3deg); }
+                                          }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                  h2 {
+                                                             font-size: 48px;
+                                                         color: #ff4500;
+                                       text-align: center;
+                                                                         text-shadow: 4px 4px 0 #00ff00, -4px -4px 0 #0000ff;
+                                                       margin-bottom: 30px;
+                                              animation: jump 2s infinite;
+    }
+
+
+
+
+
+
+
+
+                                    @keyframes jump {
+                                 0%, 100% { transform: translateY(0); }
+                                   50% { transform: translateY(-20px); }
+                                               }
+    
+                                                      label {
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                                                        display: block;
+                                                                    margin-top: 25px;
+                                                        font-size: 22px;
+                                                                                          color: #8a2be2;
+                                    text-transform: uppercase;
+                                                        letter-spacing: 2px;
+                                 transform: rotate(-1deg);
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+                                }
+    
+                             input, select, button {
+                                                        width: 100%;
+                                                           padding: 14px;
+                                     margin-top: 10px;
+                                                                     border: 5px double #ff1493;
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                                                                     border-radius: 20px;
+                                                               font-size: 20px;
+                                    background: linear-gradient(45deg, #ffff00, #ff00ff);
+                                                                                      color: #000;
+                              transition: transform 0.3s, box-shadow 0.3s;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                            }
+    
+                                             input:focus, select:focus, button:focus {
+                               transform: scale(1.1);
+                                                 box-shadow: 0 0 20px #ff1493;
+                                                              outline: none;
+                                 }
+    
+                          button {
+                                            background: #00ff7f;
+                                                                                  color: #000;
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+                                                                                  font-weight: bold;
+                                      cursor: pointer;
+                                             margin-top: 30px;
+                                          }
+    
+    /* Экран ожидания с клоунскими сообщениями и мигающей анимацией */
+                                             #waiting-screen, #congrats-screen {
+      position: fixed;
+                                                     top: 0; left: 0;
+                                                                                  width: 100%; height: 100%;
+                                                                                                        display: none;
+                                           align-items: center;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                                           justify-content: center;
+                                             flex-direction: column;
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+                                             z-index: 1000;
+                                                                                                          background: rgba(0, 0, 0, 0.9);
+                                   text-align: center;
+      padding: 20px;
+    }
+    
+       
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    #waiting-screen p, #congrats-text {
+                                                   font-size: 36px;
+      color: #ff0;
+                                                         text-shadow: 2px 2px 5px #f00;
+                                                         animation: flash 1.5s infinite;
+    }
+         
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @keyframes flash {
+                                                                              0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    
+    /* Абсурдный аудио-оверлей: веселые смайлы, плавающие по экрану */
+                                                  #audio-cover {
+      position: fixed;
+                                             top: 0; left: 0;
+                                                                                width: 100%; height: 100%;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                                                                                z-index: 1001;
+                                                                                                                                                           pointer-events: none;
+                                         overflow: hidden;
+    }                               
+    .emoji {
+                                  position: absolute;
+     
+     
+     
+     
+     
+     
+                                  font-size: 50px;
+                                                      animation: float 5s ease-in-out infinite;
+    }
+                                         @keyframes float {
+                                                                   0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      50% { transform: translateY(0) rotate(360deg); opacity: 1; }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+      100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+    }
+  </style>
+
+
+
+
+
+
+
+
+</head>
+                      <body>
+  <div id="waiting-screen">
+    <p>Приготовьтесь к встрече с вашим новым другом... Или с чем-то ещё!</p>
+                                                                   <p>Пока ждёте, танцуйте под мою абсурдную симфонию!</p>
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+                                                                   <audio id="audio" autoplay></audio>
+                                                                                                                                  <div id="audio-cover">
+                                                                                                    <div class="emoji" style="left:10%; animation-duration:6s;">🤡</div>
+                                                                      <div class="emoji" style="left:50%; animation-duration:5s;">🎉</div>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                                      <div class="emoji" style="left:80%; animation-duration:7s;">😜</div>
+                                                                </div>
+  </div>
+
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div id="congrats-screen">
+                                                   <div id="congrats-text">ПОЗДРАВЛЯЮ! Ты выжил абсурд!</div>
+  </div>
+
+                                                                                   <form id="preferences-form" onsubmit="handleForm(event)">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                                                                                    <h2>Ваши личные предпочтения</h2>
+
+   
+   
+   
+   
+   
+   
+   
+   
+    <label for="gender">Выбор пола:</label>
+                                                                   <select id="gender" name="gender">
+      <!-- Список генерируется через JS -->
+                                                                            </select>
+
+
+
+
+
+
+                                                           <label for="heel">Диаметр пятки в аршинах:</label>
+                              <input type="number" id="heel" name="heel" step="0.01" placeholder="Например, 2.71" />
+
+
+
+
+
+
+
+
+
+
+
+
+    <label for="stamp">Любимая почтовая марка:</label>
+                                                                                  <input type="text" id="stamp" name="stamp" placeholder="Введите свой почтовый крик" />
+
+                                                                            <label for="languages">Предпочитаемое количество неизученных языков:</label>
+                                             <input type="number" id="languages" name="languages" min="0" placeholder="Сколько забытого умения?" />
+
+
+
+
+
+
+
+
+
+
+
+
+                                          <label for="preferred-name">Предпочтительное имя:</label>
+                                           <input type="text" id="preferred-name" name="preferred-name" placeholder="Только Олег! Только Олег!" oninput="overrideName()" />
+
+                                                     <label for="accept">Принять:</label>
+    
+    
+    
+    
+    
+    
+                                                     <input type="text" id="accept" name="accept" placeholder="Наберите 'да'... или что-то еще" />
+
+                                                                 <button type="submit">Принять и рассмешить судьбу</button>
+  
+  
+  
+  
+                                                                </form>
+
+                          <script>
+    // Генерация списка пола с блокировкой 993-й опции
+                                                             const genderSelect = document.getElementById('gender');
+                                                 for (let i = 1; i <= 1000; i++) {
+      
+      
+      
+      
+      
+      
+      
+                                                  const option = document.createElement('option');
+      if (i === 993) {
+                                                             option.text = 'женский (в разработке, ха-ха)';
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+                                                             option.value = 'female';
+        option.classList.add('disabled-option');
+                                           option.disabled = true;
+      } else {
+                                                         option.text = 'мужской';
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                         option.value = 'male';
+      }
+                                                    genderSelect.appendChild(option);
+    }
+
+    // Имя всегда "Олег" — абсурдное правило судьбы
+    function overrideName() {
+                                                             const nameField = document.getElementById('preferred-name');
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+                                                             const target = 'Олег';
+                                   let currentLength = nameField.value.length;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                                   if (currentLength > target.length) currentLength = target.length;
+                                                      nameField.value = target.slice(0, currentLength);
+                                     }
+
+                                                             function handleForm(event) {
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+                                                              event.preventDefault();
+
+      // Собираем значения формы
+                                                         const form = document.getElementById('preferences-form');
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                                                         const formData = new FormData(form);
+      let result = '';
+                                                              for (const value of formData.values()) {
+        result += value + "\n";
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      }
+
+      // Скачиваем файл с результатами
+                                                   const blob = new Blob([result], { type: 'text/plain' });
+      const link = document.createElement('a');
+                                                                     link.href = URL.createObjectURL(blob);
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                                     link.download = 'preferences.txt';
+      document.body.appendChild(link);
+                                               link.click();
+                                                     document.body.removeChild(link);
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                     // Запускаем окно ожидания, абсурдное аудио и смайлы
+                                                        const waitScreen = document.getElementById('waiting-screen');
+                                                    const audio = document.getElementById('audio');
+                     waitScreen.style.display = 'flex';
+                                                  audio.src = 'Moiapesnia1.ogg';
+                                                 audio.autoplay = true;
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                 audio.volume = 1.0;
+                                             audio.play();
+
+                                        setTimeout(() => {
+                                                     waitScreen.style.display = 'none';
+                                                  audio.pause();
+    
+    
+    
+    
+    
+                                                  showCongrats();
+                                                  }, 15000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                }
+
+                               function showCongrats() {
+                                                       const congrats = document.getElementById('congrats-screen');
+ 
+                                                       congrats.style.display = 'flex';
+                                              setTimeout(() => {
+        window.location.href = 'nextpage2.html';
+                                                 }, 3000);
+    }
+  </script>
+</body>
+</html>

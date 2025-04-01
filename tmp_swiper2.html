@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Кринж-знакомства</title>
+  <style>
+    body {
+      font-family: Comic Sans MS, sans-serif;
+      background: repeating-linear-gradient(-45deg, #ff0000, #ff9900, #ffff00, #33cc33, #3399ff, #9933ff, #ff0099);
+      background-size: 300% 300%;
+      animation: bgMove 10s infinite linear;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    @keyframes bgMove {
+      0% { background-position: 0 0; }
+      100% { background-position: 300% 300%; }
+    }
+
+    .marquee {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      background: black;
+      padding: 10px;
+    }
+
+    .marquee div {
+      display: inline-block;
+      animation: marqueeMove 10s steps(10) infinite;
+    }
+
+    @keyframes marqueeMove {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+
+    .warning-marquee {
+      display: none;
+      position: absolute;
+      top: 60px;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      color: yellow;
+      font-size: 20px;
+      font-weight: bold;
+      background: red;
+      padding: 10px;
+    }
+
+    .profile-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-5deg);
+      width: 300px;
+      height: 400px;
+      background: white;
+      border: 5px solid black;
+      border-radius: 50% 20% 40% 30%;
+      padding: 20px;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .profile-box img {
+      width: 100%;
+      border-radius: 50% 20% 40% 30%;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+
+    .accept {
+      background: green;
+      color: white;
+    }
+
+    .reject {
+      background: red;
+      color: white;
+    }
+
+    .accept:active, .reject:active {
+      transform: scale(0.9);
+    }
+
+    .disabled {
+      background: gray;
+      pointer-events: none;
+    }
+
+    .nav-buttons {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .nav-buttons button {
+      background: blue;
+      color: white;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="marquee" id="marquee"><div id="description"></div></div>
+  <div class="warning-marquee" id="warning"><div>Дождись окончания описания!</div></div>
+
+  <div class="profile-box" id="profile">
+    <img id="profile-img" src="" alt="Кандидат">
+    <div class="buttons">
+      <button class="accept" id="accept">Принять</button>
+      <button class="reject" id="reject">Отклонить</button>
+    </div>
+  </div>
+
+  <div class="nav-buttons">
+    <button onclick="window.location.href='about.html'">О разработчике</button>
+    <button onclick="window.location.href='chat.html'">Чат</button>
+  </div>
+
+  <script>
+    const profiles = [
+      { name: "Марина 1", age: 28, description: "Ест картошку с вареньем и называет это деликатесом.", img: "https://thispersondoesnotexist.com/image" },
+      { name: "Олег 1", age: 42, description: "Представь, что мои пальчики уже в твоей влажной промежности и я, перебирая внутри тебя симфонию людвига вана бетховена, шепчу тебе в ушко, что я обосрался.", img: "Олег1.jpg" , audio: "oksi.ogg"},
+      { name: "Витя 2", age: 28, description: "Ест картошку с вареньем и называет это деликатесом.", img: "https://thispersondoesnotexist.com/image" },
+      { name: "Олег 2", age: 42, description: "Ну погоди, малышка. Я что спугнул тебя? Прости, немного разбудил своего зверя. Не спеши тапать на красную кнопочку, так уж и быть я сохраню твою попочку.", img: "Олег1.jpg" , audio: "oksi.ogg"},
+      { name: "Костя 3", age: 28, description: "Ест картошку с вареньем и называет это деликатесом.", img: "https://thispersondoesnotexist.com/image" },
+      { name: "Олег 3", age: 42, description: "Ты упускаешь свой шанс на анальное счатье, детка? Не совершай ошибок, пупсик.", img: "Олег1.jpg"  , audio: "oksi.ogg"},
+      { name: "Надя 4", age: 28, description: "Ест картошку с вареньем и называет это деликатесом.", img: "https://thispersondoesnotexist.com/image" },
+      { name: "Олег 4", age: 42, description: "Ну это не серьёзно, ты вынуждаешь меня не оставить тебе выбора...", img: "Олег1.jpg" , audio: "oksi.ogg"}
+    ];
+
+    let currentIndex = 0;
+    function loadProfile(index) {
+      const profile = profiles[index];
+      document.getElementById("description").innerText = `Имя: ${profile.name}, Возраст: ${profile.age}. ${profile.description}`;
+      document.getElementById("profile-img").src = profile.img;
+
+      const acceptBtn = document.getElementById("accept");
+      const rejectBtn = document.getElementById("reject");
+
+      if (profile.name === "Марина 1") {
+        acceptBtn.style.display = "inline-block";
+        rejectBtn.style.display = "inline-block";
+      } else if (profile.name === "Олег 4") {
+        rejectBtn.style.display = "none";
+      } else {
+        acceptBtn.style.display = "inline-block";
+        rejectBtn.style.display = "inline-block";
+      }
+    }
+
+    function handleAccept() {
+      const profile = profiles[currentIndex];
+      if (profile.name === "Марина 1") {
+        document.getElementById("accept").style.display = "none";
+      } else if (profile.name === "Олег 1" || profile.name === "Олег 2" || profile.name === "Олег 3" || profile.name === "Олег 4") {
+        window.location.href = "chat.html";
+      } else if (profile.name === "Витя 2") {
+        alert("Лучше лайкни Олега, он классный");
+      } else if (profile.name === "Костя 3") {
+        document.getElementById("marquee").innerText = "Да лайкни уже Олега";
+      }
+    }
+
+    function handleReject() {
+      const profile = profiles[currentIndex];
+      if (profile.name === "Марина 1") {
+        currentIndex = 1; // Олег 1
+      } else if (profile.name === "Олег 1") {
+        currentIndex = 2; // Витя 2
+      } else if (profile.name === "Витя 2") {
+        currentIndex = 3; // Олег 2
+      } else if (profile.name === "Олег 2") {
+        currentIndex = 4; // Костя 3
+      } else if (profile.name === "Костя 3") {
+        currentIndex = 5; // Олег 3
+      } else if (profile.name === "Олег 3") {
+        currentIndex = 6; // Надя 4
+      } else if (profile.name === "Надя 4") {
+        currentIndex = 7; // Олег 4
+      }
+      loadProfile(currentIndex);
+    }
+
+    document.getElementById("accept").addEventListener("click", handleAccept);
+    document.getElementById("reject").addEventListener("click", handleReject);
+
+    loadProfile(currentIndex);
+  </script>
+</body>
+</html>

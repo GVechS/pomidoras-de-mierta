@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                                                                        <title>СДЕЛАЙ ШАГ НА ВСТРЕЧУ МНЕ</title>
+    <style>
+        body {
+            background: red;
+      
+      
+      
+      
+      
+      
+            color: yellow;
+                                                                    text-align: center;
+       
+       
+       
+       
+       
+       
+       
+       
+                                                                    font-family: Arial, sans-serif;
+        }
+        video {
+            width: 80%;
+                                                                                                   margin-top: 20px;
+     
+     
+     
+     
+     
+     
+     
+                                                                                                   border: 5px solid yellow;
+        }
+        .alert {
+                                                                          font-size: 30px;
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+                                                                          font-weight: bold;
+            animation: blink 0.5s infinite alternate;
+                                                                 }
+        @keyframes blink {
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+            from { color: yellow; }
+                                                                                                     to { color: black; }
+        }
+        .button {
+            display: inline-block;
+       
+       
+       
+       
+       
+       
+            margin-top: 20px;
+                                                padding: 20px;
+                                                                                               background: black;
+            color: red;
+       
+       
+       
+       
+       
+       
+       
+            font-size: 25px;
+                                                       font-weight: bold;
+            text-decoration: none;
+            border: 5px solid yellow;
+    
+    
+    
+    
+    
+    
+    
+    
+            animation: shake 0.3s infinite;
+       
+       
+       
+       
+       
+       
+       
+        }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+     
+     
+     
+     
+     
+     
+     
+            25% { transform: translateX(-5px); }
+                                               50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            100% { transform: translateX(5px); }
+                                                                                                               }
+    </style>
+</head>
+                                    <body>
+                                                                                                        <div class="alert">!!! ВНИМАНИЕ !!! ВАШ ПК В ОПАСНОСТИ !!!</div>
+    <video id="myVideo" loop playsinline>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <source src="betka2.mp4" type="video/mp4">
+                                                     Ваш браузер не поддерживает видео.
+                                                                   </video>
+                                                   <br>
+                                     <button onclick="toggleSound()">🔊 ВКЛ/ВЫКЛ ЗВУК</button>
+    <br>
+                                                                                      <a href="index.html" class="button">ЙОХАРНЫЙ БАБАЙ ЖМИ!!!!</a>
+
+    <script>
+                                                                                                           document.body.addEventListener('click', function() {
+                                                     let video = document.getElementById('myVideo');
+            if (video.paused) {
+                                                 video.play().catch(error => console.log('Ошибка воспроизведения:', error));
+                                                        }
+                                              });
+
+                                                                                           function toggleSound() {
+            let video = document.getElementById('myVideo');
+                                                               video.muted = !video.muted;
+        }
+    </script>
+</body>
+</html>
